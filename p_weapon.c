@@ -545,7 +545,11 @@ void weapon_grenade_fire (edict_t *ent, qboolean held)
 	timer = ent->client->grenade_time - level.time;
 	speed = GRENADE_MINSPEED + (GRENADE_TIMER - timer) * ((GRENADE_MAXSPEED - GRENADE_MINSPEED) / GRENADE_TIMER);
 	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
-
+	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
+	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
+	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
+	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
+	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, held);
 	if (! ( (int)dmflags->value & DF_INFINITE_AMMO ) )
 		ent->client->pers.inventory[ent->client->ammo_index]--;
 
